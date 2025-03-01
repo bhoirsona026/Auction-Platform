@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { useState } from "react";
+import AuctionList from "./pages/AuctionList";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -18,6 +19,8 @@ function App() {
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/register" element={<Register setUser={setUser} />} />
         <Route path="/dashboard" element={<Dashboard user={user} />} />
+        <Route path="/auctions" element={<AuctionList />} />
+      
       </Routes>
     </Router>
   );
